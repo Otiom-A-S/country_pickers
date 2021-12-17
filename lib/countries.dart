@@ -403,7 +403,7 @@ final List<Country> countryList = [
   Country(
     isoCode: "CZ",
     phoneCode: "420",
-    name: "Czech Republic",
+    name: "Czechia",
     nameLocalized: "Česká republika",
     iso3Code: "CZE",
   ),
