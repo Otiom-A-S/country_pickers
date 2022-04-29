@@ -4,13 +4,13 @@ class Country {
   final String isoCode;
   final String iso3Code;
   final String phoneCode;
-  Country({this.isoCode, this.iso3Code, this.phoneCode, this.name, this.nameLocalized});
+  Country({ required this.isoCode, required this.iso3Code, required this.phoneCode, required this.name, required this.nameLocalized});
 
   factory Country.fromMap(Map<String, String> map) => Country(
-        name: map['name'],
-        nameLocalized: map['nameLocalized'],
-        isoCode: map['isoCode'],
-        iso3Code: map['iso3Code'],
-        phoneCode: map['phoneCode'],
+        name: map['name']!,
+        nameLocalized: map['nameLocalized']!,
+        isoCode: map['isoCode']!,
+        iso3Code: map['iso3Code']!,
+        phoneCode: map['phoneCode']!,
       );
 }
