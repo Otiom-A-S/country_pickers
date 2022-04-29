@@ -209,8 +209,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
                       country.phoneCode.startsWith(value.toLowerCase()) ||
                       country.isoCode.toLowerCase().startsWith(value.toLowerCase()) ||
                       country.iso3Code.toLowerCase().startsWith(value.toLowerCase()) ||
-                      country.name.toLowerCase().startsWith(value.toLowerCase()) ||
-                      country.nameLocalized.toLowerCase().startsWith(value.toLowerCase())
+                      country.nameLocalized.toLowerCase().contains(value.toLowerCase())
                   : widget.searchFilter!(country, value))
               .toList();
         });
