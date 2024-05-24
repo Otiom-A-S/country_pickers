@@ -107,7 +107,6 @@ class MyAlertDialog<T> extends StatelessWidget {
         ),
       ));
       if (isDividerEnabled == true) children.add(divider);
-      if (isDividerEnabled == true) children.add(divider);
     } else {
       switch (defaultTargetPlatform) {
         case TargetPlatform.iOS:
