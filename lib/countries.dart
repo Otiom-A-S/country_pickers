@@ -54,7 +54,7 @@ final List<Country> countryList = [
     isoCode: "AQ",
     phoneCode: "672",
     name: "Antarctica",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "ATA",
   ),
   Country(
@@ -173,7 +173,7 @@ final List<Country> countryList = [
     isoCode: "BT",
     phoneCode: "975",
     name: "Bhutan",
-    nameLocalized:"Druk Yul འབྲུག་ཡུལ",
+    nameLocalized: "Druk Yul འབྲུག་ཡུལ",
     iso3Code: "BTN",
   ),
   Country(
@@ -201,7 +201,7 @@ final List<Country> countryList = [
     isoCode: "BV",
     phoneCode: "47",
     name: "Bouvet Island",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "BVT",
   ),
   Country(
@@ -215,7 +215,7 @@ final List<Country> countryList = [
     isoCode: "IO",
     phoneCode: "246",
     name: "British Indian Ocean Territory",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "IOT",
   ),
   Country(
@@ -369,7 +369,7 @@ final List<Country> countryList = [
     isoCode: "CR",
     phoneCode: "506",
     name: "Costa Rica",
-    nameLocalized:"Costa Rica",
+    nameLocalized: "Costa Rica",
     iso3Code: "CRI",
   ),
   Country(
@@ -390,14 +390,14 @@ final List<Country> countryList = [
     isoCode: "CW",
     phoneCode: "599",
     name: "Curaçao",
-    nameLocalized:"Curaçao",
+    nameLocalized: "Curaçao",
     iso3Code: "CUW",
   ),
   Country(
     isoCode: "CY",
     phoneCode: "357",
     name: "Cyprus",
-    nameLocalized:"Kypros, Κύπρος, Kıbrıs",
+    nameLocalized: "Kypros, Κύπρος, Kıbrıs",
     iso3Code: "CYP",
   ),
   Country(
@@ -425,7 +425,7 @@ final List<Country> countryList = [
     isoCode: "DJ",
     phoneCode: "253",
     name: "Djibouti",
-    nameLocalized:"Jībūtī, جيبوتي ,Djibouti",
+    nameLocalized: "Jībūtī, جيبوتي ,Djibouti",
     iso3Code: "DJI",
   ),
   Country(
@@ -467,7 +467,7 @@ final List<Country> countryList = [
     isoCode: "GB-ENG",
     phoneCode: "44",
     name: "England",
-    nameLocalized:"England",
+    nameLocalized: "England",
     iso3Code: "GBR",
   ),
   Country(
@@ -551,7 +551,7 @@ final List<Country> countryList = [
     isoCode: "TF",
     phoneCode: "262",
     name: "French Southern Territories",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "ATF",
   ),
   Country(
@@ -712,6 +712,7 @@ final List<Country> countryList = [
     isoCode: "IC",
     phoneCode: "928",
     name: "Canary Islands",
+    nameLocalized: "",
     iso3Code: "IC_",
   ),
   Country(
@@ -907,21 +908,21 @@ final List<Country> countryList = [
     isoCode: "LI",
     phoneCode: "423",
     name: "Liechtenstein",
-    nameLocalized:"Liechtenstein",
+    nameLocalized: "Liechtenstein",
     iso3Code: "LIE",
   ),
   Country(
     isoCode: "LT",
     phoneCode: "370",
     name: "Lithuania",
-    nameLocalized:"Lietuva",
+    nameLocalized: "Lietuva",
     iso3Code: "LTU",
   ),
   Country(
     isoCode: "LU",
     phoneCode: "352",
     name: "Luxembourg",
-    nameLocalized:"Lëtzebuerg",
+    nameLocalized: "Lëtzebuerg",
     iso3Code: "LUX",
   ),
   Country(
@@ -935,7 +936,7 @@ final List<Country> countryList = [
     isoCode: "MK",
     phoneCode: "389",
     name: "Macedonia, the former Yugoslav Republic of",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "MKD",
   ),
   Country(
@@ -1033,14 +1034,14 @@ final List<Country> countryList = [
     isoCode: "MD",
     phoneCode: "373",
     name: "Moldova, Republic of",
-    nameLocalized:"Moldova",
+    nameLocalized: "Moldova",
     iso3Code: "MDA",
   ),
   Country(
     isoCode: "MC",
     phoneCode: "377",
     name: "Monaco",
-    nameLocalized :"Monaco, Múnegu",
+    nameLocalized: "Monaco, Múnegu",
     iso3Code: "MCO",
   ),
   Country(
@@ -1103,7 +1104,7 @@ final List<Country> countryList = [
     isoCode: "NP",
     phoneCode: "977",
     name: "Nepal",
-    nameLocalized:"Nepāl, नेपाल",
+    nameLocalized: "Nepāl, नेपाल",
     iso3Code: "NPL",
   ),
   Country(
@@ -1131,7 +1132,7 @@ final List<Country> countryList = [
     isoCode: "NZ",
     phoneCode: "64",
     name: "New Zealand",
-    nameLocalized:"Aotearoa, New Zealand",
+    nameLocalized: "Aotearoa, New Zealand",
     iso3Code: "NZL",
   ),
   Country(
@@ -1222,7 +1223,7 @@ final List<Country> countryList = [
     isoCode: "PA",
     phoneCode: "507",
     name: "Panama",
-    nameLocalized:"Panamá",
+    nameLocalized: "Panamá",
     iso3Code: "PAN",
   ),
   Country(
@@ -1390,14 +1391,14 @@ final List<Country> countryList = [
     isoCode: "SA",
     phoneCode: "966",
     name: "Saudi Arabia",
-    nameLocalized:"Al-Mamlaka Al-‘Arabiyyah as Sa‘ūdiyyah, المملكة العربية السعودية",
+    nameLocalized: "Al-Mamlaka Al-‘Arabiyyah as Sa‘ūdiyyah, المملكة العربية السعودية",
     iso3Code: "SAU",
   ),
   Country(
     isoCode: "GB-SCT",
     phoneCode: "44",
     name: "Scotland",
-    nameLocalized:"Scotland",
+    nameLocalized: "Scotland",
     iso3Code: "GBR",
   ),
   Country(
@@ -1509,7 +1510,7 @@ final List<Country> countryList = [
     isoCode: "SD",
     phoneCode: "249",
     name: "Sudan",
-    nameLocalized:"As-Sudan, السودان",
+    nameLocalized: "As-Sudan, السودان",
     iso3Code: "SDN",
   ),
   Country(
@@ -1523,7 +1524,7 @@ final List<Country> countryList = [
     isoCode: "SJ",
     phoneCode: "47",
     name: "Svalbard and Jan Mayen Islands",
-    nameLocalized:"Svalbard",
+    nameLocalized: "Svalbard",
     iso3Code: "SJM",
   ),
   Country(
@@ -1621,7 +1622,7 @@ final List<Country> countryList = [
     isoCode: "TN",
     phoneCode: "216",
     name: "Tunisia",
-    nameLocalized: "Tunes, ⵜⵓⵏⵙ, تونس", 
+    nameLocalized: "Tunes, ⵜⵓⵏⵙ, تونس",
     iso3Code: "TUN",
   ),
   Country(
@@ -1698,14 +1699,14 @@ final List<Country> countryList = [
     isoCode: "UM",
     phoneCode: "1",
     name: "US Minor Outlying Islands",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "UMI",
   ),
   Country(
     isoCode: "UZ",
     phoneCode: "998",
     name: "Uzbekistan",
-    nameLocalized:"Ўзбекистон, O‘zbekiston",
+    nameLocalized: "Ўзбекистон, O‘zbekiston",
     iso3Code: "UZB",
   ),
   Country(
@@ -1733,7 +1734,7 @@ final List<Country> countryList = [
     isoCode: "VG",
     phoneCode: "1-284",
     name: "Virgin Islands, British",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "VGB",
   ),
   Country(
@@ -1754,21 +1755,21 @@ final List<Country> countryList = [
     isoCode: "WF",
     phoneCode: "681",
     name: "Wallis and Futuna Islands",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "WLF",
   ),
   Country(
     isoCode: "EH",
     phoneCode: "212",
     name: "Western Sahara",
-    nameLocalized:"",
+    nameLocalized: "",
     iso3Code: "ESH",
   ),
   Country(
     isoCode: "YE",
     phoneCode: "967",
     name: "Yemen",
-    nameLocalized:"Al-Yaman, اليمن",
+    nameLocalized: "Al-Yaman, اليمن",
     iso3Code: "YEM",
   ),
   Country(

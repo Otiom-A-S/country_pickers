@@ -122,7 +122,6 @@ class _CountryPickerDropdownState extends State<CountryPickerDropdown> {
       try {
         _selectedCountry = _countries.firstWhere(
           (country) => country.isoCode == widget.initialValue!.toUpperCase(),
-          (country) => country.isoCode == widget.initialValue!.toUpperCase(),
         );
       } catch (error) {
         throw Exception("The initialValue provided is not a supported iso code!");

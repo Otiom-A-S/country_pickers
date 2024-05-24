@@ -23,19 +23,15 @@ class CountryPickerCupertino extends StatefulWidget {
 
   /// Filters the available country list
   final ItemFilter? itemFilter;
-  final ItemFilter? itemFilter;
 
   /// [Comparator] to be used in sort of country list
-  final Comparator<Country>? sortComparator;
   final Comparator<Country>? sortComparator;
 
   /// List of countries that are placed on top
   final List<Country>? priorityList;
-  final List<Country>? priorityList;
 
   ///Callback that is called with selected item of type Country which returns a
   ///Widget to build list view item inside dialog
-  final ItemBuilder? itemBuilder;
   final ItemBuilder? itemBuilder;
 
   ///The [itemExtent] of [CupertinoPicker]
@@ -49,7 +45,6 @@ class CountryPickerCupertino extends StatefulWidget {
   final double pickerSheetHeight;
 
   ///The TextStyle that is applied to Text widgets inside item
-  final TextStyle? textStyle;
   final TextStyle? textStyle;
 
   /// Relative ratio between this picker's height and the simulated cylinder's diameter.
@@ -79,12 +74,10 @@ class CountryPickerCupertino extends StatefulWidget {
   final double magnification;
 
   final Country? initialCountry;
-  final Country? initialCountry;
 
   /// A [FixedExtentScrollController] to read and control the current item.
   ///
   /// If null, an implicit one will be created internally.
-  final FixedExtentScrollController? scrollController;
   final FixedExtentScrollController? scrollController;
 
   const CountryPickerCupertino({
@@ -113,15 +106,12 @@ class CountryPickerCupertino extends StatefulWidget {
 class _CupertinoCountryPickerState extends State<CountryPickerCupertino> {
   late List<Country> _countries;
   FixedExtentScrollController? _scrollController;
-  late List<Country> _countries;
-  FixedExtentScrollController? _scrollController;
 
   @override
   void initState() {
     super.initState();
 
-    _countries =
-        countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
+    _countries = countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
 
     if (widget.sortComparator != null) {
       _countries.sort(widget.sortComparator);
@@ -137,12 +127,8 @@ class _CupertinoCountryPickerState extends State<CountryPickerCupertino> {
     _scrollController = widget.scrollController;
 
     if ((_scrollController == null) && (widget.initialCountry != null)) {
-      var countryInList = _countries
-          .where((c) => c.phoneCode == widget.initialCountry!.phoneCode)
-          .first;
-      _scrollController = FixedExtentScrollController(
-          initialItem: _countries.indexOf(countryInList));
-          initialItem: _countries.indexOf(countryInList));
+      var countryInList = _countries.where((c) => c.phoneCode == widget.initialCountry!.phoneCode).first;
+      _scrollController = FixedExtentScrollController(initialItem: _countries.indexOf(countryInList));
     }
   }
 
@@ -182,10 +168,7 @@ class _CupertinoCountryPickerState extends State<CountryPickerCupertino> {
       useMagnifier: widget.useMagnifier,
       magnification: widget.magnification,
       children: _countries
-          .map<Widget>((Country country) => widget.itemBuilder != null
-              ? widget.itemBuilder!(country)
-              ? widget.itemBuilder!(country)
-              : _buildDefaultItem(country))
+          .map<Widget>((Country country) => widget.itemBuilder != null ? widget.itemBuilder!(country) : _buildDefaultItem(country))
           .toList(),
       onSelectedItemChanged: (int index) {
         widget.onValuePicked(_countries[index]);

@@ -28,7 +28,6 @@ class MyAlertDialog<T> extends StatelessWidget {
   ///
   /// Typically a [Text] widget.
   final Widget? title;
-  final Widget? title;
 
   /// Padding around the title.
   ///
@@ -98,13 +97,10 @@ class MyAlertDialog<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Widget> children = <Widget>[];
     String? label = semanticLabel;
-    String? label = semanticLabel;
 
     if (title != null) {
       children.add(Padding(
-        padding: titlePadding ??
-            EdgeInsets.fromLTRB(
-                24.0, 24.0, 24.0, isDividerEnabled == true ? 20.0 : 0.0),
+        padding: titlePadding ?? EdgeInsets.fromLTRB(24.0, 24.0, 24.0, isDividerEnabled == true ? 20.0 : 0.0),
         child: DefaultTextStyle(
           style: Theme.of(context).textTheme.titleLarge!,
           child: Semantics(namesRoute: true, child: title),
@@ -116,15 +112,13 @@ class MyAlertDialog<T> extends StatelessWidget {
       switch (defaultTargetPlatform) {
         case TargetPlatform.iOS:
         case TargetPlatform.macOS:
-        case TargetPlatform.macOS:
           label = semanticLabel;
           break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
         case TargetPlatform.linux:
         case TargetPlatform.windows:
-          label = semanticLabel ??
-              MaterialLocalizations.of(context).alertDialogLabel;
+          label = semanticLabel ?? MaterialLocalizations.of(context).alertDialogLabel;
       }
     }
 
@@ -144,13 +138,9 @@ class MyAlertDialog<T> extends StatelessWidget {
       if (isDividerEnabled == true) children.add(divider);
       children.add(ButtonBar(
         children: actions!,
-      if (isDividerEnabled == true) children.add(divider);
-      children.add(ButtonBar(
-        children: actions!,
       ));
     }
 
-    Widget dialogChild = Column(
     Widget dialogChild = Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -158,8 +148,7 @@ class MyAlertDialog<T> extends StatelessWidget {
     );
 
     if (label != null) {
-      dialogChild =
-           Semantics(namesRoute: true, label: label, child: dialogChild);
+      dialogChild = Semantics(namesRoute: true, label: label, child: dialogChild);
     }
 
     return Dialog(child: dialogChild);
