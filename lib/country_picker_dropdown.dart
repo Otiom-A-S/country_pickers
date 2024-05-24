@@ -6,7 +6,8 @@ import 'utils/utils.dart';
 
 ///Provides a customizable [DropdownButton] for all countries
 class CountryPickerDropdown extends StatefulWidget {
-  const CountryPickerDropdown({super.key,
+  const CountryPickerDropdown({
+    super.key,
     required this.onValuePicked,
     this.itemFilter,
     this.sortComparator,
@@ -104,8 +105,7 @@ class _CountryPickerDropdownState extends State<CountryPickerDropdown> {
 
   @override
   void initState() {
-    _countries =
-        countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
+    _countries = countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
 
     if (widget.sortComparator != null) {
       _countries.sort(widget.sortComparator);
@@ -122,14 +122,13 @@ class _CountryPickerDropdownState extends State<CountryPickerDropdown> {
       try {
         _selectedCountry = _countries.firstWhere(
           (country) => country.isoCode == widget.initialValue!.toUpperCase(),
+          (country) => country.isoCode == widget.initialValue!.toUpperCase(),
         );
       } catch (error) {
-        throw Exception(
-            "The initialValue provided is not a supported iso code!");
+        throw Exception("The initialValue provided is not a supported iso code!");
       }
     } else {
-      if (widget.isFirstDefaultIfInitialValueNotProvided &&
-          _countries.isNotEmpty) {
+      if (widget.isFirstDefaultIfInitialValueNotProvided && _countries.isNotEmpty) {
         _selectedCountry = _countries[0];
       }
     }
@@ -141,10 +140,7 @@ class _CountryPickerDropdownState extends State<CountryPickerDropdown> {
   Widget build(BuildContext context) {
     List<DropdownMenuItem<Country>> items = _countries
         .map((country) => DropdownMenuItem<Country>(
-            value: country,
-            child: widget.itemBuilder != null
-                ? widget.itemBuilder!(country)
-                : _buildDefaultMenuItem(country)))
+            value: country, child: widget.itemBuilder != null ? widget.itemBuilder!(country) : _buildDefaultMenuItem(country)))
         .toList();
 
     return DropdownButton<Country>(
@@ -172,9 +168,7 @@ class _CountryPickerDropdownState extends State<CountryPickerDropdown> {
       itemHeight: widget.itemHeight,
       selectedItemBuilder: widget.selectedItemBuilder != null
           ? (context) {
-              return _countries
-                  .map((c) => widget.selectedItemBuilder!(c))
-                  .toList();
+              return _countries.map((c) => widget.selectedItemBuilder!(c)).toList();
             }
           : null,
     );

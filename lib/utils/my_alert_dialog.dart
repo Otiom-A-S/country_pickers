@@ -28,6 +28,7 @@ class MyAlertDialog<T> extends StatelessWidget {
   ///
   /// Typically a [Text] widget.
   final Widget? title;
+  final Widget? title;
 
   /// Padding around the title.
   ///
@@ -97,6 +98,7 @@ class MyAlertDialog<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Widget> children = <Widget>[];
     String? label = semanticLabel;
+    String? label = semanticLabel;
 
     if (title != null) {
       children.add(Padding(
@@ -109,9 +111,11 @@ class MyAlertDialog<T> extends StatelessWidget {
         ),
       ));
       if (isDividerEnabled == true) children.add(divider);
+      if (isDividerEnabled == true) children.add(divider);
     } else {
       switch (defaultTargetPlatform) {
         case TargetPlatform.iOS:
+        case TargetPlatform.macOS:
         case TargetPlatform.macOS:
           label = semanticLabel;
           break;
@@ -140,9 +144,13 @@ class MyAlertDialog<T> extends StatelessWidget {
       if (isDividerEnabled == true) children.add(divider);
       children.add(ButtonBar(
         children: actions!,
+      if (isDividerEnabled == true) children.add(divider);
+      children.add(ButtonBar(
+        children: actions!,
       ));
     }
 
+    Widget dialogChild = Column(
     Widget dialogChild = Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,

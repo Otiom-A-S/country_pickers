@@ -125,8 +125,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
 
   @override
   void initState() {
-    _allCountries =
-        countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
+    _allCountries = countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
 
     if (widget.sortComparator != null) {
       _allCountries.sort(widget.sortComparator);
@@ -134,8 +133,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
 
     if (widget.priorityList != null) {
       for (var country in widget.priorityList!) {
-        _allCountries
-          .removeWhere((Country c) => country.isoCode == c.isoCode);
+        _allCountries.removeWhere((Country c) => country.isoCode == c.isoCode);
       }
       _allCountries.insertAll(0, widget.priorityList!);
     }
@@ -163,9 +161,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
             shrinkWrap: true,
             children: _filteredCountries
                 .map((item) => SimpleDialogOption(
-                      child: widget.itemBuilder != null
-                          ? widget.itemBuilder!(item)
-                          : Text(item.name),
+                      child: widget.itemBuilder != null ? widget.itemBuilder!(item) : Text(item.name),
                       onPressed: () {
                         widget.onValuePicked(item);
                         if (widget.popOnPick) {
@@ -204,20 +200,16 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
   _buildSearchField() {
     return TextField(
       cursorColor: widget.searchCursorColor,
-      decoration:
-          widget.searchInputDecoration ?? const InputDecoration(hintText: 'Search'),
+      decoration: widget.searchInputDecoration ?? const InputDecoration(hintText: 'Search'),
       onChanged: (String value) {
         setState(() {
           _filteredCountries = _allCountries
               .where((Country country) => widget.searchFilter == null
                   ? country.name.toLowerCase().contains(value.toLowerCase()) ||
                       country.phoneCode.startsWith(value.toLowerCase()) ||
-                      country.isoCode
-                          .toLowerCase()
-                          .startsWith(value.toLowerCase()) ||
-                      country.iso3Code
-                          .toLowerCase()
-                          .startsWith(value.toLowerCase())
+                      country.isoCode.toLowerCase().startsWith(value.toLowerCase()) ||
+                      country.iso3Code.toLowerCase().startsWith(value.toLowerCase()) ||
+                      country.nameLocalized.toLowerCase().contains(value.toLowerCase())
                   : widget.searchFilter!(country, value))
               .toList();
         });
